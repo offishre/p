@@ -1,0 +1,36 @@
+# Create the student data
+student <- data.frame(
+  age = c(20, 21, 19, 22, 21, 20),
+  gpa = c(3.2, 3.5, 3.1, 3.9, 3.6, 3.4)
+)
+
+# Perform simple linear regression
+lm_model <- lm(gpa ~ age, data = student)
+
+# Print the summary of the regression model
+summary(lm_model)
+
+# Plot the scatter plot with fitted line
+plot(student$age, student$gpa, xlab = "Age", ylab = "GPA", main = "Scatter Plot with Fitted Line")
+abline(lm_model, col = "red")
+
+
+# Create the student data
+student <- data.frame(
+  age = c(20, 21, 19, 22, 21, 20),
+  study_hours = c(3, 4, 5, 6, 5, 4),
+  gpa = c(3.2, 3.5, 3.1, 3.9, 3.6, 3.4)
+)
+
+
+# Perform multiple linear regression
+lm_model <- lm(gpa ~ age + study_hours, data = student)
+
+# Print the summary of the regression model
+summary(lm_model)
+
+# Create the scatter plot with fitted line
+plot(student$age, student$gpa, xlab = "Age", ylab = "GPA", main = "Scatter Plot with Fitted Line")
+abline(lm_model, col = "red")
+# Add a legend
+legend("topleft", legend = c("Observed", "Fitted Line"), col = c("black", "red"), lty = c(0, 1), pch = c(1, NA))

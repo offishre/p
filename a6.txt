@@ -1,0 +1,8 @@
+turtles<-c(rnorm(40,mean=300,sd=18.5))
+turtles
+t.test(turtles,mu=310,conf.level = 0.95)
+
+turtles_1<-c(rnorm(38,mean=305,sd=16.7))
+turtles_1
+
+t.test(turtles,turtles_1,mu=310,conf.level = 0.90)

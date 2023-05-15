@@ -1,0 +1,19 @@
+data<-iris
+head(data)
+str(head)
+m<-mean(data$Sepal.Length)
+
+print(m)
+
+md=median(data$Sepal.Length)
+
+print(md)
+
+getmode<-function(x){
+    uniqv<-unique(x)
+    uniqv[which.max(tabulate(match(x,uniqv)))]
+    
+    
+}
+
+getmode(data$Sepal.Length)

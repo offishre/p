@@ -1,0 +1,10 @@
+x=seq(0,100,length=101)
+y<-dnorm(x,sd=13.7,mean=67)
+
+plot(x,y,type="l")
+nomrmal_distor<-function(r,sd,mean,lt){
+return pnorm(r,sd=sd,mean=mean,lower.tail=lt)
+    
+}
+
+nomrmal_distor(80,13.7,67,FALSE)
